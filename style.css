@@ -1,0 +1,218 @@
+/*Hover for nav links*/
+.nav-link:hover {
+    color: #198754 !important; 
+    }
+
+/*Hover for icons*/
+.text-success-hover:hover {
+  color: #198754 !important;
+  transition: color 0.3s;
+}
+
+/* ===== Overall transition for all fade items ===== */
+.section-animate .fade-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.section-animate .fade-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ===== PROJECT CARDS ===== */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+/* ===== Fade & Slide Up Animation for small skill boxes ===== */
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: cardFadeSlideUp 0.8s ease-out forwards;
+}
+
+@keyframes cardFadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional stagger for multiple cards */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.3s; }
+.card:nth-child(3) { animation-delay: 0.5s; }
+.card:nth-child(4) { animation-delay: 0.7s; }
+
+/* ===== Small Boxes Fade + Slide Up on Page Load ===== */
+.tech-box {
+  transition: all 0.3s ease;
+}
+
+.tech-box:hover {
+  transform: scale(1.07); 
+}
+
+@keyframes techFadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.row .tech-box:nth-child(1) { animation-delay: 0.1s; }
+.row .tech-box:nth-child(2) { animation-delay: 0.2s; }
+.row .tech-box:nth-child(3) { animation-delay: 0.3s; }
+.row .tech-box:nth-child(4) { animation-delay: 0.4s; }
+.row .tech-box:nth-child(5) { animation-delay: 0.5s; }
+.row .tech-box:nth-child(6) { animation-delay: 0.6s; }
+.row .tech-box:nth-child(7) { animation-delay: 0.7s; }
+.row .tech-box:nth-child(8) { animation-delay: 0.8s; }
+
+
+/* ===== Transition Effect in About ===== */
+ .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    }
+
+ .card-hover.show {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+ .card-hover:hover {
+   transform: translateY(-5px) scale(1.03);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+   cursor: pointer;
+   }
+
+ .fade-section {
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.8s ease, transform 0.8s ease;
+   }
+
+ .fade-section.visible {
+   opacity: 1;
+   transform: translateY(0);
+   }
+
+ /* ==== Project Card Base ==== */
+.project-card {
+  opacity: 0; /* start hidden */
+  transform: translateY(50px) scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease-out;
+  cursor: pointer;
+}
+
+/* ==== Project Card Hover ==== */
+.project-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease-out;
+}
+
+
+/* ==== Project Section CSS ==== */
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #198754;
+}
+
+/* ===== Projects Grid ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+/* ===== Project Card ===== */
+.project-card {
+    background-color: #212529; 
+    border-radius: 5px;
+    overflow: hidden;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+    color: #fff;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    flex: 1; /* Para pantay ang height ng body */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h5 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.badges span {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
