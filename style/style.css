@@ -1,0 +1,60 @@
+/* ==========================================================================
+   CUSTOM ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+
+/* Cursor Blinking effect for Typing Script */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typed-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.8s infinite;
+}
+
+/* Custom Scrollbar for Matrix/Dark Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #15803d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e;
+}
+
+/* Glassmorphism Effect Utility */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* Custom Glow Shadows for Green Matrix Theme */
+.glow-green-sm {
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+}
+
+.glow-green-md {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.glow-green-lg {
+  box-shadow: 0 0 35px rgba(34, 197, 94, 0.4);
+}
+
+/* Hardware acceleration for smooth 3D tilt cards */
+.perspective-1000 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
